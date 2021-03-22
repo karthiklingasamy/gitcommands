@@ -122,6 +122,10 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Now the file is restored to working directory
 
+Step 17: If you delete any file using OS command which is tracked by git 
+>git add -A (which will add any update to the working directory including rename and deletion)
+>git status
+
 
 
 
