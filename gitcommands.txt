@@ -92,3 +92,41 @@ Step 15: Backing Out Changes
 To revert to previous commit/get the same state of the file from last commited
 >git restore xxxxx.txt
 
+Step 16: Delete file which is tracked by git
+>git rm newfile.txt
+>git status
+>git commit -m "Delet the file"
+>git status
+
+Step 17: How to restore the stage deletion
+>git ls-files
+>git rm hipser.txt (the file is removed/deleted)
+>git status (show that the deletion is currently staged but its not permenently deleted)
+Now we want to restore the file to working directory
+>git reset HEAD hipster.txt (This command just unstage the file but not restore the file sysytem. We need to use the checkout command)
+Unstaged changes after reset:
+      hipser.txt
+However if go and check the hipster .txt file is not in our working directory. But if you check git status
+>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    hipser.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+>git checkout -- hipster.txt
+
+Now the file is restored to working directory
+
+
+
+
+
+
+
+
+
